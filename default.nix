@@ -10,6 +10,6 @@ in
  pkgs.mkShell {
    buildInputs = [  rpkgs system_packages  ];
      shellHook = ''
-       Rscript -e 'quarto::quarto_version()'
+       quarto check
      '';
 }
