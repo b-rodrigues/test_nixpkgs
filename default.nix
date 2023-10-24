@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/bcbe587526652810ed5d6f0c8896bf42df6f52dc.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/ff2a3e92a872d97c76899dd0ba250c1dcc913e6b.tar.gz") {};
  rpkgs = builtins.attrValues {
    inherit (pkgs.rPackages) quarto pandoc;
 };
