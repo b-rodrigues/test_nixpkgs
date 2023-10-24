@@ -10,6 +10,6 @@ in
  pkgs.mkShell {
    buildInputs = [  rpkgs system_packages  ];
      shellHook = ''
-       quarto check
+       quarto check --install
      '';
 }
