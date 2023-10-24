@@ -10,6 +10,6 @@ in
  pkgs.mkShell {
    buildInputs = [  rpkgs system_packages  ];
      shellHook = ''
-       quarto render hello.qmd --to html
+       quarto check
      '';
 }
