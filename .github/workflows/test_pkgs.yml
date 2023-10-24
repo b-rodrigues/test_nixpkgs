@@ -17,6 +17,9 @@ jobs:
     - name: Run `nix-build default.nix`
       run: |
         nix-build default.nix
+
+    - name: Quarto check
+      run: |
         nix-shell default.nix
 
   run-x86_64-darwin:
@@ -31,4 +34,7 @@ jobs:
     - name: Run `nix-build default.nix`
       run: |
         nix-build default.nix
+        
+    - name: Quarto check
+      run: |
         nix-shell default.nix
