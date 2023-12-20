@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/123bd723cfd9e90c3fced89fc228445a5fac3368.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/5a9439f74a50196f3cf256d9af176b202a3880ca.tar.gz") {};
  rpkgs = builtins.attrValues {
    inherit (pkgs.rPackages) quarto;
 };
