@@ -14,5 +14,7 @@ in
    buildInputs = [  rpkgs system_packages tex];
      shellHook = ''
        quarto check
+       quarto render hello.qmd
+       quarto render hello_tpyst.qmd
      '';
 }
