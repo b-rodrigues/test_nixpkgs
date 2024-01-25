@@ -1,10 +1,10 @@
 let
- pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/872395a585473a0415b0a74262e60af309ba4537.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/c09dcac8b6cc9e660169aeb76429f165b7eeb103.tar.gz") {};
  rpkgs = builtins.attrValues {
    inherit (pkgs.rPackages) quarto;
 };
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto pandoc rstudio;
+   inherit (pkgs) R quarto pandoc rstudio typst;
 };
 in
  pkgs.mkShell {
