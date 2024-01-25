@@ -7,14 +7,14 @@ let
    inherit (pkgs.texlive) scheme-small amsmath;
 });
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto pandoc typst;
+   inherit (pkgs) R quarto pandoc typst chromium;
 };
 in
  pkgs.mkShell {
-   buildInputs = [  rpkgs system_packages tex];
+   buildInputs = [ rpkgs system_packages tex];
      shellHook = ''
        quarto check
        quarto render hello.qmd
-       quarto render hello_tpyst.qmd
+       quarto render hello_typst.qmd
      '';
 }
