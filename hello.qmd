@@ -10,3 +10,7 @@ Hello Quarto
 ```{r}
 head(mtcars)
 ```
+
+```{python}
+import sys
+```
