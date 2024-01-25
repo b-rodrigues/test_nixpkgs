@@ -7,7 +7,7 @@ let
    inherit (pkgs.texlive) scheme-small amsmath;
 });
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto pandoc typst chromium;
+   inherit (pkgs) R quarto pandoc typst;
 };
 in
  pkgs.mkShell {
