@@ -4,7 +4,7 @@ let
    inherit (pkgs.rPackages) quarto;
 };
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto pandoc rstudio typst;
+   inherit (pkgs) R quarto pandoc typst;
 };
 in
  pkgs.mkShell {
