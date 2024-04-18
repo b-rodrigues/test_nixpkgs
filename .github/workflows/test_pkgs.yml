@@ -14,6 +14,10 @@ jobs:
     - uses: actions/checkout@v3
     - name: Install Nix
       uses: DeterminateSystems/nix-installer-action@main
+
+    - name: Nix metadata
+      run: nix-shell -p nix-info --run "nix-info -m
+      
     - name: Run `nix-build default.nix`
       run: |
         nix-build default.nix
