@@ -1,20 +1,12 @@
 let
- pkgs = import (fetchTarball "https://github.com/r-ryantm/nixpkgs/archive/160d717aad2bcc5e68205f3def51c9d878e87095.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/refs/heads/master.tar.gz") {};
  rpkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) quarto reticulate;
+   inherit (pkgs.rPackages) terra;
 };
- tex = (pkgs.texlive.combine {
-   inherit (pkgs.texlive) scheme-small amsmath;
-});
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto pandoc typst;
+   inherit (pkgs) R;
 };
 in
  pkgs.mkShell {
-   buildInputs = [ rpkgs system_packages tex];
-     shellHook = ''
-       quarto check
-       quarto render hello.qmd
-       quarto render hello_typst.qmd
-     '';
+   buildInputs = [ rpkgs system_packages ];
 }
