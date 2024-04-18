@@ -16,7 +16,7 @@ jobs:
       uses: DeterminateSystems/nix-installer-action@main
 
     - name: Nix metadata
-      run: nix-shell -p nix-info --run "nix-info -m
+      run: nix-shell -p nix-info --run "nix-info -m"
       
     - name: Run `nix-build default.nix`
       run: |
