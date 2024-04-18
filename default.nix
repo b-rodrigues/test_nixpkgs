@@ -3,7 +3,7 @@ let
  terra = pkgs.rPackages.terra.overrideAttrs (attrs: {
    buildInputs = attrs.buildInputs ++ pkgs.lib.optional pkgs.stdenv.isDarwin [ pkgs.curl.dev pkgs.libtiff ];
    configureFlags = [
-        "--with-proj-lib=${lib.getLib pkgs.proj}/lib"
+        "--with-proj-lib=${pkgs.lib.getLib pkgs.proj}/lib"
       ];
  });
  system_packages = builtins.attrValues {
