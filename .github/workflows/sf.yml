@@ -3,7 +3,7 @@ name: "Update cachix cache for bleeding edge"
 on:
   push:
     branches:
-      - r-daily
+      - main
 
 jobs:
   r-update-cachix:
