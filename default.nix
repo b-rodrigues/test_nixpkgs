@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/commit/e3f6e7a8ee005e4b3f9e8446d1958cf983a8f672") {};
+ pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/e3f6e7a8ee005e4b3f9e8446d1958cf983a8f672.tar.gz") {};
  terra = pkgs.rPackages.terra.overrideAttrs (attrs: {
   # buildInputs = attrs.buildInputs ++ pkgs.lib.optional pkgs.stdenv.isDarwin [ pkgs.curl.dev pkgs.libtiff ];
    configureFlags = [
