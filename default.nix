@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/Charging1948/nixpkgs/archive/4022716406882fdeeda3f8b5cc364b7b73af2fec.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/Charging1948/nixpkgs/archive/9b7cc85d7999ff69f953f47785f8255e0e61fa1f.tar.gz") {};
  rpkgs = builtins.attrValues {
    inherit (pkgs.rPackages) quarto reticulate;
 };
