@@ -13,7 +13,7 @@ in
  pkgs.mkShell {
    buildInputs = [ rpkgs system_packages tex];
      shellHook = ''
-       R -e 'kind <- "cpu-intel";version <- available.packages()["torch","Version"];options(repos = c(torch = sprintf("https://torch-cdn.mlverse.org/packages/%s/%s/", kind, version)));install.packages("torch", type = "binary")'
+       R -e 'kind <- "cpu-intel";version <- available.packages()["torch","Version"];install.packages("torch", type = "binary", repos = sprintf("https://torch-cdn.mlverse.org/packages/%s/%s/", kind, version))'
        quarto check
        quarto render hello.qmd
        quarto render hello_typst.qmd
