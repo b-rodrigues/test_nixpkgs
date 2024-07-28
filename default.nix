@@ -1,7 +1,7 @@
 let
  pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/0fdaa290cd90b18bf6877c36cef53241b3396d5d.tar.gz") {};
  rpkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) quarto reticulate;
+   inherit (pkgs.rPackages) quarto reticulate torch;
 };
  tex = (pkgs.texlive.combine {
    inherit (pkgs.texlive) scheme-small amsmath;
@@ -13,6 +13,7 @@ in
  pkgs.mkShell {
    buildInputs = [ rpkgs system_packages tex];
      shellHook = ''
+       R -e 'torch::install_torch()'
        quarto check
        quarto render hello.qmd
        quarto render hello_typst.qmd
