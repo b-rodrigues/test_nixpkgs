@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/0fdaa290cd90b18bf6877c36cef53241b3396d5d.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/57d79f6095a820737c84a471e35799413b10a65e.tar.gz") {};
  rpkgs = builtins.attrValues {
    inherit (pkgs.rPackages) quarto reticulate torch;
 };
@@ -13,7 +13,6 @@ in
  pkgs.mkShell {
    buildInputs = [ rpkgs system_packages tex];
      shellHook = ''
-       R -e 'kind <- "cpu-intel";version <- available.packages()["torch","Version"];install.packages("torch", type = "binary", repos = sprintf("https://torch-cdn.mlverse.org/packages/%s/%s/", kind, version))'
        quarto check
        quarto render hello.qmd
        quarto render hello_typst.qmd
