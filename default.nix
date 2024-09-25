@@ -1,7 +1,7 @@
 let
- pkgs = import (fetchTarball "https://github.com/r-ryantm/nixpkgs/archive/d5822adf5ba569f79e982dd9296675d82cd9d149.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/rstats-on-nix/nixpkgs/archive/refs/heads/r-daily.tar.gz") {};
  rpkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) quarto reticulate torch;
+   inherit (pkgs.rPackages) quarto reticulate terra;
 };
  tex = (pkgs.texlive.combine {
    inherit (pkgs.texlive) scheme-small amsmath;
