@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/b-rodrigues/nixpkgs/archive/812fef336e2c1eacccba4e893e0338e65adb3e21.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/d74f0ecb14965cde6de0a0718509337ddac9058d.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
    inherit (pkgs.rPackages) vapour sf terra;
