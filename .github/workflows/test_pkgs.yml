@@ -26,11 +26,11 @@ jobs:
       run: |
         nix-shell default.nix
 
-  run-x86_64-darwin:
-    name: nix builder for MacOS X86_64
+  run-aarch64-darwin:
+    name: nix builder for darwin
     # the DeterminateSystems action currently uses macos-12
     # https://github.com/DeterminateSystems/nix-installer-action/blob/main/.github/workflows/ci.yml
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
     - uses: actions/checkout@v3
     - name: Install Nix
