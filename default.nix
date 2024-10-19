@@ -1,6 +1,6 @@
 let
- # 24 may 2022
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/465a7f1ef101d4241f5416ef9968ec3f4de5d53a.tar.gz") {};
+ # 22 may 2022
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/eb8c029c9c7c61c4ea3c7b1ee0b6d45b1ad9e282.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
    inherit (pkgs.rPackages) rJava;
