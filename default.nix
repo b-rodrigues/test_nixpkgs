@@ -10,6 +10,6 @@ let
 #};
 in
  pkgs.mkShell {
-   buildInputs = [ quantlib ];
+   buildInputs = [ pkgs.quantlib ];
     
 }
