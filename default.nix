@@ -10,6 +10,6 @@ let
 };
 in
  pkgs.mkShell {
-   buildInputs = [ pkgs.quantlib ];
+   buildInputs = [ r_pkgs system_packages ];
     
 }
