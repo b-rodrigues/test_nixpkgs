@@ -1,15 +1,15 @@
 let
- pkgs = import (fetchTarball "https://github.com/rstats-on-nix/nixpkgs/archive/refs/heads/2022-01-16.tar.gz") {};
+ pkgs = import (fetchTarball " pkgs = import (fetchTarball "https://github.com/Kupac/nixpkgs/archive/8becdcf6cc94892310f11b0e26caa5fb36b546b8.tar.gz") {};
 
- r_pkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) later;
-};
+# r_pkgs = builtins.attrValues {
+#   inherit (pkgs.rPackages) later;
+#};
 
- system_packages = builtins.attrValues {
-   inherit (pkgs) R;
-};
+# system_packages = builtins.attrValues {
+#   inherit (pkgs) R;
+#};
 in
  pkgs.mkShell {
-   buildInputs = [ system_packages r_pkgs ];
+   buildInputs = [ quantlib ];
     
 }
