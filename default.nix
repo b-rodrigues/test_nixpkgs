@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/tree/master.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/cba4bff5c69aaec62b9339a5027d9bd845e660cd.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
    inherit (pkgs.rPackages) lwgeom;
