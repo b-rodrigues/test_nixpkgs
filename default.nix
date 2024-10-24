@@ -1,5 +1,5 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/fd1829b6fc9acc7d5133f2c20ae3ca61e3d66ec2.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/7bcfaeb21d57b8b926432bf017a94f030fbb2df8.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
    inherit (pkgs.rPackages) sf;
