@@ -1,8 +1,8 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/cba4bff5c69aaec62b9339a5027d9bd845e660cd.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/acab8c7bedaa1773d2f7bf7b5705dfae9ff5a602.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) lwgeom;
+   inherit (pkgs.rPackages) ChemmineOB;
 };
 
  system_packages = builtins.attrValues {
