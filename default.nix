@@ -1,8 +1,8 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/9a88197fe7825f486052e3a9eca4a68192335978.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/f074c0b02af937bc839f0e4648a3cdfbb5f34452.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) AER;
+   inherit (pkgs.rPackages) ChemmineOB;
 };
 
  system_packages = builtins.attrValues {
