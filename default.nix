@@ -1,8 +1,8 @@
 let
- pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/069077c3797516a781580f4685f4326d0f1f53d9.tar.gz") {};
+ pkgs = import (fetchTarball "https://github.com/rstats-on-nix/nixpkgs/archive/refs/heads/master.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) ChemmineOB;
+   inherit (pkgs.rPackages) rJava;
 };
 
  system_packages = builtins.attrValues {
