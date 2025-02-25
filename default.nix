@@ -2,11 +2,11 @@ let
  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/f11263d6948953a83df38e232ddf773bc5d4470f.tar.gz") {};
 
  r_pkgs = builtins.attrValues {
-   inherit (pkgs.rPackages) quarto;
+   inherit (pkgs.rPackages) quarto reticulate;
 };
 
  system_packages = builtins.attrValues {
-   inherit (pkgs) R quarto typst;
+   inherit (pkgs) R quarto typst python312Full;
 };
 in
  pkgs.mkShell {
